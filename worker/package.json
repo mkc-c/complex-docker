@@ -5,6 +5,6 @@
   },
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemone"
+    "dev": "nodemon"
   }
 }
