@@ -1,7 +1,7 @@
 const keys = require("./keys");
 
 const express = require("express");
-const bodyParser = requier("body-parser");
+const bodyParser = require("body-parser");
 const cors = require("cors");
 
 const app = express();
