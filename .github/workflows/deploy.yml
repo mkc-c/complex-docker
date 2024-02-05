@@ -16,7 +16,7 @@ jobs:
       - run: docker build -t abdir/multi-client ./client
       - run: docker build -t abdir/multi-nginx ./nginx
       - run: docker build -t abdir/multi-server ./server
-      - run: docker build -t abdir/mutli-worker ./worker
+      - run: docker build -t abdir/multi-worker ./worker
 
       - run: docker push abdir/multi-client
       - run: docker push abdir/multi-nginx
