@@ -5,14 +5,17 @@ on:
       - main
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
+  steps:
+      - name: Define secrets
       - shell: bash
         env:
           secret_username: ${{ secrets.DOCKERHUB_USERNAME }}
           secret_password: ${{ secrets.DOCKERHUB_PASSWORD }}
-      - uses: actions/checkout@v2
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+      - uses: actions/checkout@v3
       - run: docker login -u "$secret_username" -p "$secret_password"
       - run: docker build -t abdir/react-test -f ./client/Dockerfile.dev ./client
       - run: docker run -e CI=true abdir/react-test npm test
