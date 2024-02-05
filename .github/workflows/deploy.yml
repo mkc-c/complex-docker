@@ -5,6 +5,7 @@ on:
       - main
 
 jobs:
+  secrets: inherit
   build:
     runs-on: ubuntu-latest
     steps:
