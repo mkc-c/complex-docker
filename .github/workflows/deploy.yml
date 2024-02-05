@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - run: docker build -t abdir/react-test -f ./client/Dockerfile.dev ./client
-      - run: docker run -e CI=true cygnetops/react-test npm test
+      - run: docker run -e CI=true abdir/react-test npm test
 
       - run: docker build -t abdir/multi-client ./client
       - run: docker build -t abdir/multi-nginx ./nginx
