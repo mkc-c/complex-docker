@@ -4,7 +4,7 @@ services:
     image: "abdir/multi-client"
     mem_limit: 128m
     hostname: client
-  api:
+  server:
     image: "abdir/multi-server"
     mem_limit: 128m
     hostname: api
